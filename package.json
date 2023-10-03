@@ -1,5 +1,5 @@
 {
-    "name": "prakhar-template",
+    "name": "algohub",
     "private": true,
     "version": "0.0.0",
     "type": "module",
@@ -14,6 +14,9 @@
         "rename": "node ./scripts/setup-scripts/packageRename.js"
     },
     "dependencies": {
+        "@radix-ui/themes": "^1.1.2",
+        "@tanstack/react-query": "^4.35.7",
+        "@tanstack/react-table": "^8.10.3",
         "onchange": "^7.1.0",
         "prop-types": "^15.8.1",
         "react": "^18.2.0",
@@ -31,6 +34,7 @@
         "eslint-plugin-react": "^7.32.2",
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-react-refresh": "^0.4.3",
+        "miragejs": "^0.1.47",
         "prettier": "3.0.2",
         "vite": "^4.4.5",
         "vite-plugin-eslint": "^1.8.1"

@@ -19,7 +19,7 @@ for (let tempPath of templateFilePath) {
         }
 
         const updatedData = data.replace(
-            /"name": "template"/,
+            /"name": "prakhar-template"/,
             `"name": "${projectName}"`
         );
         writeFile(tempPath, updatedData, (err) => {

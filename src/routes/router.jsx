@@ -1,7 +1,5 @@
+// Helps in creating routes config
 // V6 of react router standard way is to create a routes object and pass down to createBrowserRouter Api for creating routes
-import Home from 'views/home/home.jsx';
-import Chat from 'views/chat/chat.jsx';
-
 /*
 Typical route object 
 interface RouteObject {
@@ -22,16 +20,11 @@ interface RouteObject {
 }
 */
 // This contains all the routes in route Array with the properties as above
+
 // Here we can also define child elements through children property
-export const RoutesArray = [
-    {
-        path: '/',
-        element: <Home />,
-        children: [
-            {
-                path: '/chat',
-                element: <Chat />,
-            },
-        ],
-    },
-];
+import { publicRoutes } from '~/routes/public.jsx';
+import { commonRoutes } from '~/routes/commonRoutes.jsx';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+const Routes = createBrowserRouter([...publicRoutes, ...commonRoutes]);
+const Router = () => <RouterProvider router={Routes} />;
+export default Router;
